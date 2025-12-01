@@ -14,11 +14,11 @@ export default function InteractiveRating() {
     <main>
       {!isSubmitted && (
         <div className="card">
-          <div className="star">
+          <div className="rating-star">
             <img src={starIcon} alt="Star Icon" />
           </div>
           <h1 className="card-title">How did we do?</h1>
-          <p className="card-text">
+          <p className="card-description">
             Please let us know how we did with your support request. All
             feedback is appreciated to help us improve our offering!
           </p>
@@ -26,25 +26,25 @@ export default function InteractiveRating() {
             {ratingArray.map((rate, i) => (
               <li
                 key={i}
-                className={`rate-circle ${starsCount === rate ? "active" : ""}`}
+                className={`rate-item ${starsCount === rate ? "rate-item--active" : ""}`}
                 onClick={() => setStarsCount(rate)}
               >
                 {rate}
               </li>
             ))}
           </ul>
-          <button className="card-submit" onClick={handleSubmit}>
+          <button className="card-submit" onClick={handleSubmit} type="button">
             Submit
           </button>
         </div>
       )}
 
       {isSubmitted && (
-        <div className="card thank-card">
-          <img src={thankIcon} alt="Thank You Icon" className="thank-img" />
+        <div className="card card--thank">
+          <img src={thankIcon} alt="Thank You Icon" className="thank-card-img" />
           <p className="special-text">You selected {starsCount} out of 5</p>
           <h2 className="card-title">Thank you!</h2>
-          <p className="card-text">
+          <p className="card-description">
             We appreciate you taking the time to give a rating. If you ever need
             more support, don’t hesitate to get in touch!
           </p>
