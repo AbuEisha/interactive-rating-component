@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-@mixin circle {
+@mixin circle-base {
   width: 2.85rem;
   height: 2.85rem;
   @media (min-width: 25rem) {
@@ -15,4 +15,10 @@
   border-radius: 50%;
   @include flex-center();
   background-color: vars.$dark-gray;
+}
+
+@mixin safe-transition {
+  @media (prefers-reduced-motion: no-preference) {
+    @content;
+  }
 }
