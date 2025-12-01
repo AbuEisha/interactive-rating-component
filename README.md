@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://interactive-rating-component-euo.pages.dev/)
 
 ## My process
 
@@ -43,4 +43,4 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- [Frontend Mentor Profile](https://www.frontendmentor.io/profile/AbuEisha)
