@@ -66,6 +66,10 @@
   &--active {
     background-color: vars.$white-color;
     color: vars.$dark-gray;
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
   }
 }
 
@@ -88,5 +92,15 @@
   }
   &:hover {
     background-color: vars.$white-color;
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:focus-visible {
+      outline: 2px solid vars.$btn-bg-color;
+      outline-offset: 2px;
+    }
   }
 }
